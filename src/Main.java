@@ -26,9 +26,10 @@ public class Main {
 		if (neighbor + 512 == pos) findWorldSeeds(s1, s2, 0, 1);
 		if (neighbor - 16 - 512 == pos) findWorldSeeds(s1, s2, -1, -1);
 		if (neighbor - 16 + 512 == pos) findWorldSeeds(s1, s2, -1, 1);
-		if (neighbor + 16 - 512 == pos) findWorldSeeds(s1, s2, 1, -0);
+		if (neighbor + 16 - 512 == pos) findWorldSeeds(s1, s2, 1, -1);
 		if (neighbor + 16 + 512 == pos) findWorldSeeds(s1, s2, 1, 1);
 	}
+
 	public static void main(String[] args) {
 		findWorldSeeds(Long.parseLong(args[0]), Long.parseLong(args[1]));
 	}
