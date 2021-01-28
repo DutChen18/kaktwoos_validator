@@ -14,8 +14,8 @@ public class Main {
 		}
 	}
 
-	public static void findWorldSeeds(long s1, long s2) {
-		CactusSimulation sim = new CactusSimulation(10, 63);
+	public static void findWorldSeeds(long s1, long s2, int height) {
+		CactusSimulation sim = new CactusSimulation(10, height);
 		sim.populate(s1);
 		int pos = sim.currentHighestPos;
 		int neighbor = (int) ((s2 >> 48) & ((1L << 10) - 1));
@@ -31,6 +31,6 @@ public class Main {
 	}
 
 	public static void main(String[] args) {
-		findWorldSeeds(Long.parseLong(args[0]), Long.parseLong(args[1]));
+		findWorldSeeds(Long.parseLong(args[0]), Long.parseLong(args[1]), Integer.parseInt(args[2]));
 	}
 }
